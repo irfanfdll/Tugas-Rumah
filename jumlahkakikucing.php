@@ -14,7 +14,7 @@
                 <tr>
                     <td>Jumlah Kaki Kucing </td>
                     <td>:</td>
-                    <td><input type="number" name="bilangan1"></td>
+                    <td><input type="number" name="jumlahKaki"></td>
                 </tr>
                     <td></td><td></td>
                     <td><input type="submit" name="proses" value="Proses"></td>
@@ -27,20 +27,20 @@
 
 <?php 
 if (isset($_POST['proses'])) {
-    $bilangan1 = $_POST['bilangan1'];
+    $jumlahKaki = $_POST['jumlahKaki'];
    }
-class Aritmatika{
-    public function __construct($bilangan1){
-        $this-> bilangan1 = "$bilangan1";
+class MenentukanJumlahKakiKucing{
+    public function __construct($jumlahKaki){
+        $this-> jumlahKaki = "$jumlahKaki";
     
     }
-    public function tambah()
+    public function keadaanKucing()
         {
-            if ($this->bilangan1 > 4) {
+            if ($this->jumlahKaki > 4) {
                 $outpu = "Siluman Kucing";
-            } elseif ($this->bilangan1 < 4) {
+            } elseif ($this->jumlahKaki < 4) {
                 $outpu = "Kucing Cingked";
-            } elseif ($this->bilangan1 = 4){
+            } elseif ($this->jumlahKaki = 4){
                 $outpu = "Kucing Normal";
             }
             return $outpu  ;
@@ -49,8 +49,8 @@ class Aritmatika{
         
         
 }
-$penjumlahan = new aritmatika($bilangan1);
+$kaki = new MenentukanJumlahKakiKucing($jumlahKaki);
 echo "<table>";
-echo "<tr><td>Jumlah Kaki</td><td>:</td><td>".$penjumlahan->bilangan1 . "</td></tr>";
-echo "<tr><td>Info</td><td>:</td><td>".$penjumlahan->tambah() . "</td></tr>";
+echo "<tr><td>Jumlah Kaki</td><td>:</td><td>".$kaki->jumlahKaki . "</td></tr>";
+echo "<tr><td>Info</td><td>:</td><td>".$kaki->keadaanKucing() . "</td></tr>";
 echo "</table>";
