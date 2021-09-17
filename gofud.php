@@ -82,7 +82,7 @@ if (isset($_POST['Input'])) {
         public function status()
         {
             if ("Cash" == $this->sistempembayaran) {
-                $a = "Menggangu Manusia";
+                $a = "Tidak Ada Cash Back";
 
             } elseif ("M-Banking" == $this->sistempembayaran) {
                 $a = "Ada Yang beribadah ada juga yang menyesatkan";
